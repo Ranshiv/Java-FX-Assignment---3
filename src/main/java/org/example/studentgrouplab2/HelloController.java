@@ -129,10 +129,7 @@ public class HelloController {
 
         if (selectedFile != null) {
             try (PrintWriter writer = new PrintWriter(selectedFile)) {
-                // Write header
                 writer.println("ID,First Name,Last Name,Age,Enrollment Date,Major");
-
-                // Write data
                 for (Student student : studentList) {
                     writer.println(String.format("%d,%s,%s,%d,%s,%s",
                             student.getStudentID(),
